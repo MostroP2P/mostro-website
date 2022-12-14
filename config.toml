@@ -1,0 +1,40 @@
+# The URL the site will be built for
+base_url = "https://mostro.network"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+theme = "terminimal"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[extra]
+# Put all your custom variables here
+accent_color = "green"
+copyright_html = "© 2022 @mostro. All rights reversed."
+
+menu_items = [
+  # each of these is optional, name and url are required
+  # $BASE_URL is going to be substituted by base_url from configuration
+  { name = "blog", url = "$BASE_URL" },
+
+  # tags should only be enabled if you have "tags" taxonomy
+  # see documentation below for more details
+  #{name = "tags", url = "$BASE_URL/tags"},
+  #{name = "archive", url = "$BASE_URL/archive"},
+  #{name = "about me", url = "$BASE_URL/about"},
+
+  # set newtab to true to make the link open in new tab
+  { name = "github", url = "https://github.com/MostroP2P", newtab = true },
+  { name = "twitter", url = "https://twitter.com/MostroP2P", newtab = true },
+  { name = "donate", url = "https://geyser.fund/project/mostro", newtab = true },
+]
+
+use_full_hack_font = true
+author = "Francisco Calderón"

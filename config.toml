@@ -32,6 +32,7 @@ menu_items = [
 
   # set newtab to true to make the link open in new tab
   { name = "github", url = "https://github.com/MostroP2P", newtab = true },
+  { name = "nostr", url = "https://iris.to/mostro@nostrplebs.com", newtab = true },
   { name = "twitter", url = "https://twitter.com/MostroP2P", newtab = true },
   { name = "donate", url = "https://geyser.fund/project/mostro", newtab = true },
 ]

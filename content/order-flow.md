@@ -31,7 +31,7 @@ Example of a message from a buyer sending a lightning network invoice, the conte
 ```json
 {
   "version": "0",
-  "order_id": 54,
+  "order_id": "6ceda69d-99e4-4263-84cd-157a673aa307",
   "action": "TakeSell",
   "content": {
     "PaymentRequest": "lnbcrt500u1p3e0xwkpp585pza8m5klgy3zn4dw7ej32jh0hz5mrucc04aezcjx2uulr4tf2sdqqcqzpgxqyz5vqsp52m65dwsqkq5n630pareeswal9e2xxx0ldykuhhcfc0ed2znwzmfq9qyyssqz422f9qtwcleykknzq29yhyytufddhnml4hqdtu3mtpw37kvltqkp7z4y6ntkhy7vpy2eyy53qzjsa0u7mmmx8ee5td64c8x4vm2vcsq786ewz"
@@ -92,7 +92,7 @@ The seller wants to exchange `100` sats and get `1000` of `XXX` currency, to pub
       "fiat_code": "XXX",
       "fiat_amount": 1000,
       "payment_method": "bank transfer",
-      "prime": 1
+      "prime": 0
     }
   }
 }
@@ -121,7 +121,7 @@ Mostro publishes this order as an event kind `30000` with status `Pending`:
   "id": "74a1ce6e428ba3b4d7c99a5f582b04afdb645aa5f0c661cf83ed3c4e547c04ad",
   "kind": 30000,
   "pubkey": "7590450f6b4d2c6793cacc8c0894e2c6bd2e8a83894912e79335f8f98436d2d8",
-  "content": "{\"version\":0,\"order_id\":54,\"kind\":\"Sell\",\"status\":\"Pending\",\"amount\":100,\"fiat_code\":\"XXX\",\"fiat_amount\":1000,\"payment_method\":\"bank transfer\",\"prime\":1,\"payment_request\":null}",
+  "content": "{\"version\":0,\"order_id\":\"6ceda69d-99e4-4263-84cd-157a673aa307\",\"kind\":\"Sell\",\"status\":\"Pending\",\"amount\":100,\"fiat_code\":\"XXX\",\"fiat_amount\":1000,\"payment_method\":\"bank transfer\",\"prime\":0,\"payment_request\":null}",
   "tags": [],
   "created_at": 1234567890,
   "sig": "a21eb195fe418613aa9a3a8a78039b090e50dc3f9fb06b0f3fe41c63221adc073a9317a1f28d9db843a43c28d860ba173b70132ca85b0e706f6487d43a57ee82"
@@ -141,7 +141,7 @@ Unencrypted content:
 ```json
 {
   "version": "0",
-  "order_id": 54,
+  "order_id": "6ceda69d-99e4-4263-84cd-157a673aa307",
   "action": "TakeSell",
   "content": {
     "PaymentRequest": "lnbcrt1u1p3e0geapp5u3nfpcmc4llggqq6upp85p32kvph6uh8caqkruph5xh0lgl4764qdqqcqzpgxqyz5vqsp59ul6delmlj35rk0k5hcfxz9q0xfcgdsflkzpf673g08dhkm6gtjq9qyyssqe6daccezwpjxxm7n7nqh3zw5ykjl42wmneaukhedaz037t0tarmjnfay3j3xddwz6eg7q98zxct32trfq3h2tr72xyhrkls255q4wfspn84a2e"
@@ -188,7 +188,7 @@ After the seller pays the invoice mostro put the parties in touch and update the
   "id": "74a1ce6e428ba3b4d7c99a5f582b04afdb645aa5f0c661cf83ed3c4e547c04ad",
   "kind": 30000,
   "pubkey": "7590450f6b4d2c6793cacc8c0894e2c6bd2e8a83894912e79335f8f98436d2d8",
-  "content": "{\"version\":0,\"order_id\":54,\"kind\":\"Sell\",\"status\":\"Active\",\"amount\":100,\"fiat_code\":\"XXX\",\"fiat_amount\":1000,\"payment_method\":\"bank transfer\",\"prime\":1,\"payment_request\":null}",
+  "content": "{\"version\":0,\"order_id\":\"6ceda69d-99e4-4263-84cd-157a673aa307\",\"kind\":\"Sell\",\"status\":\"Active\",\"amount\":100,\"fiat_code\":\"XXX\",\"fiat_amount\":1000,\"payment_method\":\"bank transfer\",\"prime\":1,\"payment_request\":null}",
   "tags": [],
   "created_at": 1234567890,
   "sig": "a21eb195fe418613aa9a3a8a78039b090e50dc3f9fb06b0f3fe41c63221adc073a9317a1f28d9db843a43c28d860ba173b70132ca85b0e706f6487d43a57ee82"
@@ -204,7 +204,7 @@ Unencrypted `fiat sent` message:
 ```json
 {
   "version": "0",
-  "order_id": 54,
+  "order_id": "6ceda69d-99e4-4263-84cd-157a673aa307",
   "action": "FiatSent"
 }
 ```
@@ -232,7 +232,7 @@ Now Mostro send a replaceable event kind `30000` with the same id, a newer times
   "id": "74a1ce6e428ba3b4d7c99a5f582b04afdb645aa5f0c661cf83ed3c4e547c04ad",
   "kind": 30000,
   "pubkey": "7590450f6b4d2c6793cacc8c0894e2c6bd2e8a83894912e79335f8f98436d2d8",
-  "content": "{\"version\":0,\"order_id\":54,\"kind\":\"Sell\",\"status\":\"FiatSent\",\"amount\":100,\"fiat_code\":\"XXX\",\"fiat_amount\":1000,\"payment_method\":\"bank transfer\",\"prime\":1,\"payment_request\":null}",
+  "content": "{\"version\":0,\"order_id\":\"6ceda69d-99e4-4263-84cd-157a673aa307\",\"kind\":\"Sell\",\"status\":\"FiatSent\",\"amount\":100,\"fiat_code\":\"XXX\",\"fiat_amount\":1000,\"payment_method\":\"bank transfer\",\"prime\":0,\"payment_request\":null}",
   "tags": [],
   "created_at": 1234567890,
   "sig": "a21eb195fe418613aa9a3a8a78039b090e50dc3f9fb06b0f3fe41c63221adc073a9317a1f28d9db843a43c28d860ba173b70132ca85b0e706f6487d43a57ee82"
@@ -248,7 +248,7 @@ Unencrypted `release` message:
 ```json
 {
   "version": "0",
-  "order_id": 54,
+  "order_id": "6ceda69d-99e4-4263-84cd-157a673aa307",
   "action": "Release"
 }
 ```

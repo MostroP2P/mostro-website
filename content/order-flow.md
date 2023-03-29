@@ -30,7 +30,7 @@ Example of a message from a buyer sending a lightning network invoice, the conte
 
 ```json
 {
-  "version": "0",
+  "version": 0,
   "order_id": "6ceda69d-99e4-4263-84cd-157a673aa307",
   "action": "TakeSell",
   "content": {
@@ -60,7 +60,7 @@ Example of message from a buyer to create a buy order:
 
 ```json
 {
-  "version": "0",
+  "version": 0,
   "action": "Order",
   "content": {
     "Order": {
@@ -82,7 +82,7 @@ The seller wants to exchange `100` sats and get `1000` of `XXX` currency, to pub
 
 ```json
 {
-  "version": "0",
+  "version": 0,
   "action": "Order",
   "content": {
     "Order": {
@@ -140,7 +140,7 @@ Unencrypted content:
 
 ```json
 {
-  "version": "0",
+  "version": 0,
   "order_id": "6ceda69d-99e4-4263-84cd-157a673aa307",
   "action": "TakeSell",
   "content": {
@@ -173,7 +173,7 @@ Unencrypted message from Mostro to user:
 
 ```json
 {
-  "version": "0",
+  "version": 0,
   "action": "PayInvoice",
   "content": {
     "PaymentRequest": "lnbcrt1u1p3e0geapp5u3nfpcmc4llggqq6upp85p32kvph6uh8caqkruph5xh0lgl4764qdqqcqzpgxqyz5vqsp59ul6delmlj35rk0k5hcfxz9q0xfcgdsflkzpf673g08dhkm6gtjq9qyyssqe6daccezwpjxxm7n7nqh3zw5ykjl42wmneaukhedaz037t0tarmjnfay3j3xddwz6eg7q98zxct32trfq3h2tr72xyhrkls255q4wfspn84a2e"
@@ -203,7 +203,7 @@ Unencrypted `fiat sent` message:
 
 ```json
 {
-  "version": "0",
+  "version": 0,
   "order_id": "6ceda69d-99e4-4263-84cd-157a673aa307",
   "action": "FiatSent"
 }
@@ -247,7 +247,7 @@ Unencrypted `release` message:
 
 ```json
 {
-  "version": "0",
+  "version": 0,
   "order_id": "6ceda69d-99e4-4263-84cd-157a673aa307",
   "action": "Release"
 }

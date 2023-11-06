@@ -4,11 +4,11 @@ description = "In-progress specifications"
 date = 2022-11-24
 +++
 
-**_ Updated: 2023-04-07 _**
+**_Updated: 2023-11-06_**
 
 ## Overview
 
-All mostro messages are [Parameterized Replaceable Events](https://github.com/nostr-protocol/nips/blob/master/33.md) and use `30000` as event `kind`, a list of standard event kinds can be found [here](https://github.com/nostr-protocol/nips)
+All mostro messages are [Parameterized Replaceable Events](https://github.com/nostr-protocol/nips/blob/master/33.md) and use `30078` as event `kind`, a list of standard event kinds can be found [here](https://github.com/nostr-protocol/nips)
 
 ## Keys
 
@@ -120,12 +120,12 @@ Event example:
 }
 ```
 
-Mostro publishes this order as an event kind `30000` with status `Pending`:
+Mostro publishes this order as an event kind `30078` with status `Pending`:
 
 ```json
 {
   "id": "74a1ce6e428ba3b4d7c99a5f582b04afdb645aa5f0c661cf83ed3c4e547c04ad",
-  "kind": 30000,
+  "kind": 30078,
   "pubkey": "7590450f6b4d2c6793cacc8c0894e2c6bd2e8a83894912e79335f8f98436d2d8",
   "content": "{\"id\":\"6ceda69d-99e4-4263-84cd-157a673aa307\",\"kind\":\"Sell\",\"status\":\"Pending\",\"amount\":100,\"fiat_code\":\"XXX\",\"fiat_amount\":1000,\"payment_method\":\"bank transfer\",\"prime\":0}",
   "tags": [["d", "6ceda69d-99e4-4263-84cd-157a673aa307"]],
@@ -205,12 +205,12 @@ Unencrypted message from Mostro to user:
 }
 ```
 
-After the seller pays the invoice mostro put the parties in touch and update the order sending a replaceable event kind `30000` with the same id, a newer timestamp and status `Active`:
+After the seller pays the invoice mostro put the parties in touch and update the order sending a replaceable event kind `30078` with the same id, a newer timestamp and status `Active`:
 
 ```json
 {
   "id": "74a1ce6e428ba3b4d7c99a5f582b04afdb645aa5f0c661cf83ed3c4e547c04ad",
-  "kind": 30000,
+  "kind": 30078,
   "pubkey": "7590450f6b4d2c6793cacc8c0894e2c6bd2e8a83894912e79335f8f98436d2d8",
   "content": "{\"id\":\"6ceda69d-99e4-4263-84cd-157a673aa307\",\"kind\":\"Sell\",\"status\":\"Active\",\"amount\":100,\"fiat_code\":\"XXX\",\"fiat_amount\":1000,\"payment_method\":\"bank transfer\",\"prime\":0}",
   "tags": [["d", "6ceda69d-99e4-4263-84cd-157a673aa307"]],
@@ -249,12 +249,12 @@ Encrypted content event example:
 }
 ```
 
-Now Mostro send a replaceable event kind `30000` with the same id, a newer timestamp and status `FiatSent`:
+Now Mostro send a replaceable event kind `30078` with the same id, a newer timestamp and status `FiatSent`:
 
 ```json
 {
   "id": "74a1ce6e428ba3b4d7c99a5f582b04afdb645aa5f0c661cf83ed3c4e547c04ad",
-  "kind": 30000,
+  "kind": 30078,
   "pubkey": "7590450f6b4d2c6793cacc8c0894e2c6bd2e8a83894912e79335f8f98436d2d8",
   "content": "{\"id\":\"6ceda69d-99e4-4263-84cd-157a673aa307\",\"kind\":\"Sell\",\"status\":\"FiatSent\",\"amount\":100,\"fiat_code\":\"XXX\",\"fiat_amount\":1000,\"payment_method\":\"bank transfer\",\"prime\":0}",
   "tags": [["d", "6ceda69d-99e4-4263-84cd-157a673aa307"]],
@@ -279,4 +279,4 @@ Unencrypted `release` message:
 
 ## Settle seller's invoice
 
-Mostro settle the invoice and send a replaceable event kind `30000` with the same id, a newer timestamp and status `SettledHoldInvoice`, right after tries to pay the buyer's invoice, after the invoice is paid Mostro send a replaceable event kind `30000` with status `Success`.
+Mostro settle the invoice and send a replaceable event kind `30078` with the same id, a newer timestamp and status `SettledHoldInvoice`, right after tries to pay the buyer's invoice, after the invoice is paid Mostro send a replaceable event kind `30078` with status `Success`.
